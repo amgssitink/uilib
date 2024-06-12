@@ -1,5 +1,12 @@
-if getgenv().Tvk then 
-    if game.CoreGui:FindFirstChild("MMB HUB GUI") then for i, v in ipairs(game.CoreGui:GetChildren()) do if v.Name == "MMB HUB GUI" or v.Name == "MMB HUB Notification" then v:Destroy() end end end
+function GetUi() 
+    if getgenv().Tvk then
+    if game.CoreGui:FindFirstChild("MMB HUB GUI") then
+        for a, v in ipairs(game.CoreGui:GetChildren()) do
+            if v.Name == "MMB HUB GUI" then
+                v:Destroy()
+            end
+        end
+    end
 end
 
 getgenv().Tvk = true
@@ -4012,9 +4019,7 @@ return Library
 
 local SettingsMMB = {}
 local win = Library.CreateMain(SettingsMMB)
-
 local Home = win.CreatePage({Page_Name = "Home",Page_Title = "Home"})
-
 local Section = Home.CreateSection("Main")
 Section.CreateToggle({Title = "Toggle",Desc = "Test",Default = false},function(v)
 print(v)
