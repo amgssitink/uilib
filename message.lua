@@ -4010,8 +4010,6 @@ end
 
 return Library
 
-local SettingsCTE = {}
-
 local Home = win.CreatePage({Page_Name = "Home",Page_Title = "Home"})
 
 local Section = Home.CreateSection("Main")
@@ -4021,6 +4019,7 @@ end)
 Section.CreateButton({Title = "Button"},function()
     print('Click')
 end)
+
 Section.CreateLabel({Title = "Label"})
 Section.CreateBox({Title = "TextBox",Placeholder = "Place holder"},function(v)
     print(v)
