@@ -1,8 +1,8 @@
 if getgenv().Tvk then 
-    if game.CoreGui:FindFirstChild("MMB HUB GUI") then for i, v in ipairs(game.CoreGui:GetChildren()) do if v.Name == "MMB HUB GUI" then v:Destroy() end end end
-end
-
-getgenv().Tvk = true
+		if game.CoreGui:FindFirstChild("MMB HUB GUI") then for i, v in ipairs(game.CoreGui:GetChildren()) do if v.Name == "CTE HUB GUI" then v:Destroy() end end end
+	end
+	getgenv().Tvk = true
+	getgenv().Chon = true
 
 local IndexUIColor = {
     ["Border Color"] = Color3.fromRGB(255, 1, 132),
