@@ -1,5 +1,5 @@
 if getgenv().Tvk then 
-    if game.CoreGui:FindFirstChild("MMB HUB GUI") then for i, v in ipairs(game.CoreGui:GetChildren()) do if v.Name == "MMB HUB GUI" or v.Name == "MMB HUB Notification" then v:Destroy() end end end
+    if game.CoreGui:FindFirstChild("MMB HUB GUI") then for i, v in ipairs(game.CoreGui:GetChildren()) do if v.Name == "MMB HUB GUI" then v:Destroy() end end end
 end
 
 getgenv().Tvk = true
