@@ -1,5 +1,5 @@
 if getgenv().Tvk then 
-		if game.CoreGui:FindFirstChild("MMB HUB GUI") then for i, v in ipairs(game.CoreGui:GetChildren()) do if v.Name == "CTE HUB GUI" then v:Destroy() end end end
+		if game.CoreGui:FindFirstChild("MMB HUB GUI") then for i, v in ipairs(game.CoreGui:GetChildren()) do if v.Name == "MMB HUB GUI" then v:Destroy() end end end
 	end
 	getgenv().Tvk = true
 	getgenv().Chon = true
@@ -4009,25 +4009,3 @@ function Library.CreateMain(Setting)
 end
 
 return Library
-
-local SettingsMMB = {}
-local win = Library.CreateMain(SettingsMMB)
-local Home = win.CreatePage({Page_Name = "Home",Page_Title = "Home"})
-local Section = Home.CreateSection("Main")
-Section.CreateToggle({Title = "Toggle",Desc = "Test",Default = false},function(v)
-print(v)
-end)
-Section.CreateButton({Title = "Button"},function()
-    print('Click')
-end)
-Section.CreateLabel({Title = "Label"})
-Section.CreateBox({Title = "TextBox",Placeholder = "Place holder"},function(v)
-    print(v)
-end)
-Section.CreateSlider({Title = "Slider",Min = 0,Max = 100,Precise = false,Default = 50},function(v)
-    print(v)
-end)
-
-Section.CreateDropdown({Title = "Dropdown",List = {'A','B'},Default = 'A',Precise = false,Search = false},function(v)
-    print(v)
-end)
