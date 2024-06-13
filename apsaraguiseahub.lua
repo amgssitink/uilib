@@ -1,5 +1,5 @@
 if getgenv().Tvk then
-    if game.CoreGui:FindFirstChild("APSARA HUB GUI") then for i, v in ipairs(game.CoreGui:GetChildren()) do if v.Name == "APSARA HUB GUI" or v.Name == "APSARA HUB Notification" then v:Destroy() end end end
+    if game.CoreGui:FindFirstChild("Apsara Hub GUI") then for i, v in ipairs(game.CoreGui:GetChildren()) do if v.Name == "Apsara Hub GUI" or v.Name == "Apsara Hub Notification" then v:Destroy() end end end
 end
 
 getgenv().Tvk = true
@@ -89,19 +89,19 @@ local SaveCustomFileName = "!CustomUI.json"
 
 function SaveCustomUISettings()
     local HttpService = game:GetService("HttpService")
-    if not isfolder("APSARA HUB") then
-        makefolder("APSARA HUB")
+    if not isfolder("Apsara Hub") then
+        makefolder("Apsara Hub")
     end
-    writefile("APSARA HUB/" .. SaveCustomFileName, HttpService:JSONEncode(CorrectTable(SettingsRac)))
+    writefile("Apsara Hub/" .. SaveCustomFileName, HttpService:JSONEncode(CorrectTable(SettingsRac)))
 end
 
 function ReadCustomUISetting() 
     local s,e = pcall(function() 
         local HttpService = game:GetService("HttpService")
-        if not isfolder("APSARA HUB") then
-            makefolder("APSARA HUB")
+        if not isfolder("Apsara Hub") then
+            makefolder("Apsara Hub")
         end
-        return HttpService:JSONDecode(readfile("APSARA HUB/" .. SaveCustomFileName))
+        return HttpService:JSONDecode(readfile("Apsara Hub/" .. SaveCustomFileName))
     end)
     if s then return e 
     else
@@ -210,7 +210,7 @@ end
 
 Library_Function.Gui = Instance.new('ScreenGui')
 Library_Function.Gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-Library_Function.Gui.Name = 'APSARA HUB GUI'
+Library_Function.Gui.Name = 'Apsara Hub GUI'
 
 getgenv().ReadyForGuiLoaded = false
 spawn(function()
@@ -222,7 +222,7 @@ end)
 
 Library_Function.NotiGui = Instance.new('ScreenGui')
 Library_Function.NotiGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-Library_Function.NotiGui.Name = 'APSARA HUB Notification'
+Library_Function.NotiGui.Name = 'Apsara Hub Notification'
 
 
 local NotiContainer = Instance.new("Frame")
@@ -319,14 +319,14 @@ function Library.CreateNoti(Setting)
     local colorG = tostring(Library_Function.Getcolor(getgenv().UIColor['Title Text Color'])[2])
     local colorB = tostring(Library_Function.Getcolor(getgenv().UIColor['Title Text Color'])[3])
     local color = colorR .. ',' .. colorG .. ',' .. colorB
-    TextLabelNoti.Text = "<font color=\"rgb(" .. color .. ")\">APSARA HUB</font> "..getgenv().TitleNameNoti
+    TextLabelNoti.Text = "<font color=\"rgb(" .. color .. ")\">Apsara Hub</font> "..getgenv().TitleNameNoti
 
     table.insert(UpdateCallBack["Title Text Color"],function() 
         local colorR = tostring(Library_Function.Getcolor(getgenv().UIColor['Title Text Color'])[1])
         local colorG = tostring(Library_Function.Getcolor(getgenv().UIColor['Title Text Color'])[2])
         local colorB = tostring(Library_Function.Getcolor(getgenv().UIColor['Title Text Color'])[3])
         local color = colorR .. ',' .. colorG .. ',' .. colorB
-        TextLabelNoti.Text = "<font color=\"rgb(" .. color .. ")\">APSARA HUB</font> "..getgenv().TitleNameNoti
+        TextLabelNoti.Text = "<font color=\"rgb(" .. color .. ")\">Apsara Hub</font> "..getgenv().TitleNameNoti
     end)
     
     TextLabelNoti.Name = "TextLabelNoti"
@@ -428,7 +428,7 @@ end
 function Library.CreateMain(Setting)
 
     local TitleNameMain = tostring(Setting.Title) or "Apsara Hub"
-    getgenv().MainDesc = "Blox Fruits"
+    getgenv().MainDesc = "Test"
 
     local djtmemay = false
     cac = false
@@ -525,14 +525,14 @@ function Library.CreateMain(Setting)
         local colorG = tostring(Library_Function.Getcolor(getgenv().UIColor['Title Text Color'])[2])
         local colorB = tostring(Library_Function.Getcolor(getgenv().UIColor['Title Text Color'])[3])
         local color = colorR .. ',' .. colorG .. ',' .. colorB
-        TextLabelMain.Text = "<font color=\"rgb("..color..")\">APSARA HUB</font> " .. getgenv().MainDesc
+        TextLabelMain.Text = "<font color=\"rgb("..color..")\">Apsara Hub</font> " .. getgenv().MainDesc
         table.insert(UpdateCallBack["Title Text Color"],function() 
             maingui.ImageColor3 = getgenv().UIColor['Title Text Color']
             local colorR = tostring(Library_Function.Getcolor(getgenv().UIColor['Title Text Color'])[1])
             local colorG = tostring(Library_Function.Getcolor(getgenv().UIColor['Title Text Color'])[2])
             local colorB = tostring(Library_Function.Getcolor(getgenv().UIColor['Title Text Color'])[3])
             local color = colorR .. ',' .. colorG .. ',' .. colorB
-            TextLabelMain.Text = "<font color=\"rgb("..color..")\">APSARA HUB</font> " .. getgenv().MainDesc
+            TextLabelMain.Text = "<font color=\"rgb("..color..")\">Apsara Hub</font> " .. getgenv().MainDesc
         end)
         local MainContainer_
         if v ~= ""
@@ -586,14 +586,14 @@ function Library.CreateMain(Setting)
     local colorG = tostring(Library_Function.Getcolor(getgenv().UIColor['Title Text Color'])[2])
     local colorB = tostring(Library_Function.Getcolor(getgenv().UIColor['Title Text Color'])[3])
     local color = colorR .. ',' .. colorG .. ',' .. colorB
-    TextLabelMain.Text = "<font color=\"rgb("..color..")\">APSARA HUB</font> " .. getgenv().MainDesc
+    TextLabelMain.Text = "<font color=\"rgb("..color..")\">Apsara Hub</font> " .. getgenv().MainDesc
     table.insert(UpdateCallBack["Title Text Color"],function() 
         maingui.ImageColor3 = getgenv().UIColor['Title Text Color']
         local colorR = tostring(Library_Function.Getcolor(getgenv().UIColor['Title Text Color'])[1])
         local colorG = tostring(Library_Function.Getcolor(getgenv().UIColor['Title Text Color'])[2])
         local colorB = tostring(Library_Function.Getcolor(getgenv().UIColor['Title Text Color'])[3])
         local color = colorR .. ',' .. colorG .. ',' .. colorB
-        TextLabelMain.Text = "<font color=\"rgb("..color..")\">APSARA HUB</font> " .. getgenv().MainDesc
+        TextLabelMain.Text = "<font color=\"rgb("..color..")\">Apsara Hub</font> " .. getgenv().MainDesc
     end)
     local MainContainer
     local defurl = getgenv().UIColor["Background Image"]
@@ -708,13 +708,13 @@ function Library.CreateMain(Setting)
     local colorG = tostring(Library_Function.Getcolor(getgenv().UIColor['Title Text Color'])[2])
     local colorB = tostring(Library_Function.Getcolor(getgenv().UIColor['Title Text Color'])[3])
     local color = colorR .. ',' .. colorG .. ',' .. colorB
-    TextLabelMain.Text = "<font color=\"rgb("..color..")\">APSARA HUB</font> " .. getgenv().MainDesc
+    TextLabelMain.Text = "<font color=\"rgb("..color..")\">Apsara Hub</font> " .. getgenv().MainDesc
     table.insert(UpdateCallBack["Title Text Color"],function() 
         local colorR = tostring(Library_Function.Getcolor(getgenv().UIColor['Title Text Color'])[1])
         local colorG = tostring(Library_Function.Getcolor(getgenv().UIColor['Title Text Color'])[2])
         local colorB = tostring(Library_Function.Getcolor(getgenv().UIColor['Title Text Color'])[3])
         local color = colorR .. ',' .. colorG .. ',' .. colorB
-        TextLabelMain.Text = "<font color=\"rgb("..color..")\">APSARA HUB</font> " .. getgenv().MainDesc
+        TextLabelMain.Text = "<font color=\"rgb("..color..")\">Apsara Hub</font> " .. getgenv().MainDesc
     end)
     
     SettionMain.Name = "SettionMain"
@@ -4008,8 +4008,8 @@ function Library.CreateMain(Setting)
 
 end
 
-local SettingsMMB = {}
-local win = Library.CreateMain(SettingsMMB)
+local SettingsApsara = {}
+local win = Library.CreateMain(SettingsApsara)
 local Home = win.CreatePage({Page_Name = "Home",Page_Title = "Home"})
 local Section = Home.CreateSection("Main")
 Section.CreateToggle({Title = "Toggle",Desc = "Test",Default = false},function(v)
