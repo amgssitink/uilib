@@ -1,5 +1,4 @@
 local SettingsMMB = {}
-local win = Library.CreateMain(SettingsMMB)
 local Home = win.CreatePage({Page_Name = "Home",Page_Title = "Home"})
 local Section = Home.CreateSection("Main")
 Section.CreateToggle({Title = "Toggle",Desc = "Test",Default = false},function(v)
